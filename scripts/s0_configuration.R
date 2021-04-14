@@ -1,10 +1,18 @@
 ######################################## Structure des fichiers et fichiers des codes et trajectoires
 options(stringsAsFactors = F)
-library(dplyr)
-library(tidyr)
-library(readr)
-library(rgdal)
-library(raster)
+packages <- function(x){
+  x <- as.character(match.call()[[2]])
+  if (!require(x,character.only=TRUE)){
+    install.packages(pkgs=x,repos="http://cran.r-project.org")
+    require(x,character.only=TRUE)
+  }
+}
+
+packages(dplyr)
+packages(tidyr)
+packages(readr)
+packages(rgdal)
+packages(raster)
 
 
 scr_dir <- paste0(ges_dir,"scripts/")
