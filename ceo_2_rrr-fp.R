@@ -10,7 +10,7 @@ superficie_pays <- 32000000
 ########################################################################################################################
 
 ######################################## Chemin du dossier: hors SEPAL, changer pour mettre le chemin jusqu'au dossier voulu
-(ges_dir  <- paste0(normalizePath("~"),"/iges_congo/") )
+(ges_dir  <- paste0(normalizePath("~"),"/ceo_to_RRR_FP/") )
 
 
 ######################################## Packages et options
