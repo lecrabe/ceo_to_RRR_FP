@@ -7,7 +7,7 @@ plot(spdf)
 ######################################## EXTRACTION DES DONNEES TMF
 tmf <- brick(paste0(inp_dir,"/tmf_CHG_COG.tif"))
 
-tmp_tmf <- data.frame(extract(tmf,spdf))
+tmp_tmf <- data.frame(raster::extract(tmf,spdf))
 names(tmp_tmf) <- paste0("code_",c(1990,2000,2010,2019))
 
 tmp_tmf$sort_id <- row(tmp_tmf)[,1]
